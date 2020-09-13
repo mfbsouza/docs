@@ -2,4 +2,5 @@
 Everybody has to start somewhere. Sharing my knowledge with the world 
 
 ## Content
-- [gitflow](docs/gitflow.md) - Team workflow using git
+- [MicroPython on the ESP32](docs/micropython-esp32.md)
+- [Git-Flow](docs/gitflow.md)
