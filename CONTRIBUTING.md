@@ -7,4 +7,4 @@ Hey, thanks for checking out. I would love your feedback. You can contribute in:
 - adding more information to a Doc
 - Sending your own Doc!
 
-Please fill free to open a issue or sending me a Pull Request.
+Please feel free to open a issue or sending me a Pull Request.
