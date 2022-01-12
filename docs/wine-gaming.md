@@ -13,6 +13,8 @@
 	- [Enabling FSYNC](#enabling-fsync)
 	- [Enabling AMD FSR](#enabling-amd-fsr)
 	- [Updating Wine Prefix](#updating-wine-prefix)
+	- [Monitoring Game Performance](#monitoring-game-performance)
+	- [Gamemode](#gamemode)
 
 ---
 
