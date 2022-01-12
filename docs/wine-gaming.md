@@ -103,3 +103,21 @@ for a more non-graphical way you can do something like:
 	export WINEDEUG=-all
 	WINEPREFIX='/path/to/prefix' wine net help >/dev/null
 
+### Monitoring game performance
+
+If using DXVK one can monitor games performance by enabling the bultin HUD. there a many options for what information to display, you can check it in [DXVK github page](https://github.com/doitsujin/dxvk). For basic status you can just:
+
+	DXVK_HUD=1 WINEPREFIX='/path/to/prefix' wine ./game.exe
+
+I would recommend you to use MangoHud which does the same things as DXVK Hud but more, like looking FPS for Vulkan and OpenGL games. check out it's [github page](https://github.com/flightlessmango/MangoHud)
+
+**NOTE:** In some games the HUD may not work but it doesn't mean that DXVK is not in use. One can verify that your application uses DXVK instead of wined3d by checking for the presence of the log file d3d9.log or d3d11.log in the application's directory.
+
+### Gamemode
+
+Feral's GameMode is a daemon/lib combo for Linux that allows games to request a set of optimisations be temporily applied to the host OS and/or game process. It's really nice and really easy to use it, you just need to install it in your system and do:
+
+	gamemoderun WINEPREFIX='/path/to/prefix' wine ./game.exe
+
+Check it's [github page](https://github.com/FeralInteractive/gamemode) for more info.
+
