@@ -1,14 +1,14 @@
 # Getting started with Diff and Patch
 
 ## Sections
-- [Create a Patch file using diff](create-a-patch-file-using-diff)
-- [Apply a Patch file](apply-a-patch-file)
-- [Create a Patch from a source tree](create-a-patch-from-a-source-tree)
-- [Take a Backup before applying the patch](take-a-backup-before-applying-the-patch)
-- [Validate the Patch without Applying](validate-the-patch-without-applying)
-- [Reverse a Patch that is already applied](reverse-a-patch-that-is-already-applied)
-- [Git patch and Diff](git-patch-and-diff)
-- [Apply the Git Patch](apply-the-git-patch)
+- [Create a Patch file using diff](#create-a-patch-file-using-diff)
+- [Apply a Patch file](#apply-a-patch-file)
+- [Create a Patch from a source tree](#create-a-patch-from-a-source-tree)
+- [Take a Backup before applying the patch](#take-a-backup-before-applying-the-patch)
+- [Validate the Patch without Applying](#validate-the-patch-without-applying)
+- [Reverse a Patch that is already applied](#reverse-a-patch-that-is-already-applied)
+- [Git patch and Diff](#git-patch-and-diff)
+- [Apply the Git Patch](#apply-the-git-patch)
 
 ## Create a Patch file using diff
 
