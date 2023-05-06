@@ -40,6 +40,7 @@ this will attach to your detached tmux session.
 - Hit `[Ctrl]+[b] and then [c]` to create a new windows
 - Hit `[Ctrl]+[b] and then [n] or [p]` to move the the next or previous window
 - Hit `[Ctrl]+[b] and some number` to move to a specific window by number
+- Hit `[Ctrl]+[d] to close a window
 
 ### Spliting window in panes and moving through them
 
