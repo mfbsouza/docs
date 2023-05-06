@@ -11,12 +11,6 @@ Running tmux is simply as running:
 
 	$ tmux
 
-## Creating new windows and moving through then
-
-- Hit `[Ctrl]+[b] and then [c]` to create a new windows
-- Hit `[Ctrl]+[b] and then [n] or [p]` to move the the next or previous window
-- Hit `[Ctrl]+[b] and some number` to move to a specific window by number
-
 ## Detach/Reattach from the current session
 
 - Hit `[Ctrl]+[b] and then [d]` to detach from the session
@@ -31,17 +25,37 @@ or:
 
 	$ tmux a
 
+or to reattach the specific session:
+
+    $ tmux a -t <session-name>
+
 this will attach to your detached tmux session.
 
 **Tip:** You can run `tmux ls` to list all running sessions
 
-## Spliting window in panes and moving through them
+## Hotkeys
+
+### Creating new windows and moving through then
+
+- Hit `[Ctrl]+[b] and then [c]` to create a new windows
+- Hit `[Ctrl]+[b] and then [n] or [p]` to move the the next or previous window
+- Hit `[Ctrl]+[b] and some number` to move to a specific window by number
+
+### Spliting window in panes and moving through them
 
 - Hit `[Ctrl]+[b] and then [%]` to split the window horizontally
 - Hit `[Ctrl]+[b] and then ["]` to split the window vertically
 - Hit `[Ctrl]+[b] and any Arrow Key` to move between panes
 - Hit `[Ctrl]+[b] and then [x]` to close pane
 
-## List all keybindings
+### Interactive listing of sessions and windows
+- Hit `[Ctrl]+[b] and then [s]` to show and choose all sessions in a list
+- Hit `[Ctrl]+[b] and then [w]` to show and choose all windows in a list 
+
+### Renaming of sessions and windows
+- Hit `[Ctrl]+[b] and then [$]` to rename the current session
+- Hit `[Ctrl]+[b] and then [,]` to rename the current window
+
+### List all keybindings
 
 - Hit `[Ctrl]+[b] and then [?]` to view all keybindings. Press [q] to exit.
