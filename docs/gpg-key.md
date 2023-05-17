@@ -25,8 +25,22 @@ run:
 
 	$ gpg --list-keys
 
-## Exporting the gpg key
+## Backing up the gpg key
 
-run:
+for the public key run:
 
-	$ gpg --export --armor EMAIL@HERE.COM >gpg.pub
+	$ gpg --export --export-options backup --output public.gpg
+
+for the private key run:
+
+    $ gpg --export-secret-keys --export-options backup --output private.gpg
+
+for the trust relationships run:
+
+    $ gpg --export-ownertrust > trust.gpg
+
+## Restoring keys
+
+    $ gpg --import public.gpg
+    $ gpg --import private.gpg
+    $ gpg --import-ownertrust trust.gpg
