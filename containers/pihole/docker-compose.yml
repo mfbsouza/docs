@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # change this
+      - "80:80/tcp"
+    environment:
+      # change this
+      TZ: 'America/Xd'
+      # change this
+      WEBPASSWORD: 'secret'
+    volumes:
+      - '/opt/pihole/etc-pihole:/etc/pihole'
+      - '/opt/pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+    restart: unless-stopped
+    networks:
+      custom_network:
+        # change this
+        ipv4_address: 0.0.0.0
+networks:
+  custom_network:
+    external: true
+    name: custom_network
+    ipam:
+      driver: default
+      config:
+        # change this
+        - subnet: 0.0.0.0/24

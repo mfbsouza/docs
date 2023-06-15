@@ -1,0 +1,45 @@
+---
+version: "2.1"
+services:
+  swag:
+    image: lscr.io/linuxserver/swag:latest
+    container_name: swag
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # change this
+      - TZ=America/Xd
+      # change this
+      - URL=.duckdns.org
+      - VALIDATION=dns
+      # change this
+      - SUBDOMAINS=www,
+      - DNSPLUGIN=duckdns
+      # change this
+      - EMAIL=hey@there.com
+      - ONLY_SUBDOMAINS=false #optional
+      #- EXTRA_DOMAINS= #optional
+    volumes:
+      - /opt/swag/config:/config
+    ports:
+      - 443:443
+      - 80:80 #optional
+    restart: unless-stopped
+    dns:
+      # change this
+      - 0.0.0.0
+    networks:
+      custom_network:
+        # change this
+        ipv4_address: 0.0.0.0
+networks:
+  custom_network:
+    external: true
+    name: custom_network
+    ipam:
+      driver: default
+      config:
+        # change this
+        - subnet: 0.0.0.0/24

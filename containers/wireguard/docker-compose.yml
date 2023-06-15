@@ -1,0 +1,47 @@
+---
+version: "2.1"
+services:
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # change this
+      - TZ=America/Xd
+      # change this
+      #- SERVERURL=wireguard.domain.com #optional
+      - SERVERPORT=51820
+      - PEERS=3
+      # change this
+      #- PEERDNS=auto #optional
+      - INTERNAL_SUBNET=10.13.13.0
+      # disable QR codes from show on the docker log
+      - LOG_CONFS=false
+    volumes:
+      - /opt/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+    dns:
+      # change this
+      - 0.0.0.0
+    networks:
+      custom_network:
+        # change this
+        ipv4_address: 0.0.0.0
+networks:
+  custom_network:
+    external: true
+    name: custom_network
+    ipam:
+      driver: default
+      config:
+        # change this
+        - subnet: 0.0.0.0/24

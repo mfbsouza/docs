@@ -1,0 +1,33 @@
+---
+version: "2.1"
+services:
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: duckdns
+    environment:
+      - PUID=1000
+      - PGID=1000
+      # change this
+      - TZ=America/Xd
+      # change this
+      - SUBDOMAINS=subdomain
+      # change this
+      - TOKEN=secret
+      - LOG_FILE=false
+    restart: unless-stopped
+    dns:
+      # change this
+      - 0.0.0.0
+    networks:
+      custom_network:
+        # change this
+        ipv4_address: 0.0.0.0
+networks:
+  custom_network:
+    external: true
+    name: custom_network
+    ipam:
+      driver: default
+      config:
+        # change this
+        - subnet: 0.0.0.0/24
